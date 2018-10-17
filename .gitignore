@@ -32,5 +32,3 @@ rsconnect/
 .RData
 .Ruserdata
 public
-static/figures
-blogdown
