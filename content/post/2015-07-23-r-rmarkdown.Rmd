@@ -35,3 +35,9 @@ pie(
   init.angle = -50, border = NA
 )
 ```
+
+如果要使用 rmarkdown 输出，则需要将 Rmd，html 和 static 下面的 Rplot 一起 Commit 到 GitHub。
+
+Commit everything you see under content/ and static/, including the .html output files.[^1]
+
+[^1]:https://github.com/rstudio/blogdown/issues/169#issuecomment-321460204
