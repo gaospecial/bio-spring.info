@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "A Hugo website"
+title = "R.bio-spring.info"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = "bio-spring-netlify-com"
