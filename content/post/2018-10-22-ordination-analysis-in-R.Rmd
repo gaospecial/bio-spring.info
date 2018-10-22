@@ -46,6 +46,7 @@ tags:
 
 其中PCA和RDA是基于线性模型（linear model）的，而CA、DCA、CCA、DCCA是基于单峰（unimodal）模型。
 
+
 # 选择单峰模型还是线性模型？
 
 1. 用DCA（`vegan::decorana()`）先对数据（site-species）进行分析；
@@ -134,8 +135,6 @@ cca(varespec,varechem)
 # 延伸阅读
 
 1. 赖江山等，基于Vegan 软件包的生态学数据排序分析。http://blog.sciencenet.cn/blog-267448-463699.html
-
-
 
 
 
