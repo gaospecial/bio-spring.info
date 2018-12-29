@@ -32,3 +32,5 @@ rsconnect/
 .RData
 .Ruserdata
 public
+data
+.gitignore

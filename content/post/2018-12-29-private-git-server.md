@@ -11,13 +11,15 @@ tags:
 
 既然说到 Git，GitHub 你一定是了解的。GitHub 对于私有仓库是收费的。如果你项目还在进行中，需要一个仓库却又不想付高昂的服务费。使用自己的服务器当然也是可以的，而且很方便。
 
-自己的服务器可以使阿里云这样的主机服务商，也可以是你能访问的任意一台Linux主机。只要能够 SSH 登录即可。
+自己的服务器可以是阿里云这样的主机服务商，也可以是你能访问的任意一台Linux主机。只要能够 SSH 登录即可。
 
 # 从服务器中开始
 
+如果你的文件目前存储在服务器端，想在本地开展工作并使用服务器同步更新，可以参考下面的操作。
+
 ## 服务器端配置
 
-1. 添加一个新用户(也可以使用原有用户).
+- 添加一个新用户(也可以使用原有用户).
 
 ```{bash}
 adduser git
@@ -25,7 +27,7 @@ adduser git
 
 在添加用户git时, 会创建 `/home/git` 目录, 同时还会创建 `git` 用户组.
 
-2. 在服务器上创建一个git仓库("sample").
+- 在服务器上创建一个git仓库("sample").
 
 ```{bash}
 cd /home/git
@@ -35,7 +37,7 @@ git init --bare sample.git
 chown -R git:git sample.git
 ```
 
-3. 添加git的ssh认证.
+- 添加git的ssh认证.
 
 ```{bash}
 mkdir /home/git/.ssh
@@ -49,12 +51,12 @@ EOF
 
 ## 客户端操作
 
-4. 从服务器clone repository.
+- 从服务器clone repository.
 
 ```{bash}
 git clone git@remote.com:/home/git/sample.git
 ```
-5. 添加内容, 修改, 更新....
+- 添加内容, 修改, 更新....
 
 ```{bash}
 cd sample
@@ -68,6 +70,8 @@ git push
 ```
 
 # 从本地开始
+
+如果你本地有一个 Git 仓库，想把它上传到服务器中以便于随时随地访问和多人协同作业，则可以参考下面的操作。
 
 ## 客户端使用
 
@@ -113,8 +117,8 @@ git push origin master
 # 客户端配置
 
 其他用户使用时, 需要:
-1. 下载安装Git(https://git-scm.com/downloads);
-2. 对Git进行设置, 包括用户名, 邮箱等信息;
+- 下载安装Git(https://git-scm.com/downloads);
+- 对Git进行设置, 包括用户名, 邮箱等信息;
 
 参考下面的代码.
 
@@ -129,7 +133,7 @@ git config --global user.email=your@email.com
 
 用户名和邮箱是为了区分不同协作者之用.
 
-3. 生成一对密钥. 私钥自己保存,  "公钥" 提交给管理员, 由管理员添加到服务器中;
+- 生成一对密钥. 私钥自己保存,  "公钥" 提交给管理员, 由管理员添加到服务器中;
 
 继续输入以下代码即可.
 
