@@ -18,3 +18,4 @@ tags:
 Preview版本的链接有点不大好找，在这里：(https://www.rstudio.com/products/rstudio/download/preview/)。
 
 很多人都遇到了这个问题：(https://community.rstudio.com/t/options-error-in-rmd-code-chunks/30195)。也有人通过其它方法解决了这个问题。
+
