@@ -175,13 +175,15 @@ success &lt;- lapply(seq_along(m3_list), function(x){
     plot(main=method[[x]])
 })</code></pre>
 <p><img src="/post/2020-02-26-igraph-matrices_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<pre class="r"><code>par(mfrow=c(1,2))
-
-g3_weighted &lt;- graph_from_adjacency_matrix(m3_list[[2]], mode = &quot;undirected&quot;, weighted = TRUE)
-plot(g3_weighted, main=&quot;before setup edge width&quot;)
-
-E(g3_weighted)$width  &lt;- edge.attributes(g3_weighted)$weight*5
-plot(g3_weighted, main=&quot;after setup edge width to weight&quot;)</code></pre>
+<p>乍看上去，生成的网络是一样的，但事实上边的属性不一样。
+如果我们把边的宽度映射到“weight”属性，则仍然可以发现文献B和C之间的耦合关系是最强的。</p>
+<pre class="r"><code>par(mfrow=c(2,3))
+success &lt;- lapply(seq_along(m3_list), function(x){
+  par(mar=c(1,1,1,1))
+  g3_weighted &lt;- graph_from_adjacency_matrix(m3_list[[x]], mode = &quot;undirected&quot;, weighted = TRUE)
+  E(g3_weighted)$width  &lt;- edge.attributes(g3_weighted)$weight*5
+  plot(g3_weighted, main=method[[x]])
+})</code></pre>
 <p><img src="/post/2020-02-26-igraph-matrices_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>对于耦合网络来说，图中的 loop 是没有意义的。可以使用 <code>igraph::simplify()</code> 来去掉。</p>
 <pre class="r"><code>g4 &lt;- simplify(g3, remove.multiple = FALSE, remove.loops = TRUE)
