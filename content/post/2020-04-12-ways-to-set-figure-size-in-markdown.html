@@ -1,0 +1,37 @@
+---
+title: 在RMarkdown中设定图片大小的方法
+author: gaoch
+date: '2020-04-13'
+slug: ways-to-set-figure-size-in-markdown
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>本文是 <a href="https://sebastiansauer.github.io/figure_sizing_knitr/">英文原文</a> 的翻译。</p>
+<ol style="list-style-type: decimal">
+<li>使用 YAML 头部文件</li>
+</ol>
+<pre><code>--- 
+title: &quot;My Document&quot; 
+output: html_document: 
+fig_width: 6 
+fig_height: 4 
+--- </code></pre>
+<p>统一设置每个图片的宽 6 英寸，高 4 英寸。</p>
+<pre class="r"><code>plot(pressure)</code></pre>
+<p><img src="/post/2020-04-12-ways-to-set-figure-size-in-markdown_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>使用 chunk option</li>
+</ol>
+<p>这将影响后面所有代码生成图片的大小。</p>
+<pre class="r"><code>knitr::opts_chunk$set(fig.width=4, fig.height=4)
+plot(pressure)</code></pre>
+<p><img src="/post/2020-04-12-ways-to-set-figure-size-in-markdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>如果仅需要改变单一图片，则可以将chunk option 写到对应的 chunk 中。如<code>{r fig2, fig.height = 3, fig.width = 3, fig.align = "center"}</code>。</p>
+<pre class="r"><code>plot(pressure)</code></pre>
+<p><img src="/post/2020-04-12-ways-to-set-figure-size-in-markdown_files/figure-html/fig2-1.png" width="288" style="display: block; margin: auto;" /></p>
