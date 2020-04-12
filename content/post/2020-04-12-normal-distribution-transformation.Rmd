@@ -9,6 +9,11 @@ tags:
   - statistics
 ---
 
+```{r options,echo=FALSE}
+knitr::opts_chunk$set(out.width = "80%")
+```
+
+
 
 数据满足正态分布是进行很多统计分析的前提，如果不符合正态分布，则需要对数据进行转换。常用的转化方式有：
 

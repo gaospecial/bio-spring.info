@@ -22,32 +22,32 @@ tags:
 <pre class="r"><code># 生成正态分布数据
 normal &lt;- rnorm(100,mean = 5, sd = 2.5)
 plot(normal)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-1.png" width="80%" /></p>
 <pre class="r"><code># 从直方图可以看出数据符合正态分布
 hist(normal)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-2.png" width="80%" /></p>
 <pre class="r"><code># 从QQ plot也可以看出来
 qqnorm(normal)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-1-3.png" width="80%" /></p>
 <p>对正态数据进行平方运算后，直方图显示数据成了左偏的结构。反过来，意味着如果你正在使用的数据与下面的数据分布类似，则可以尝试用开平方的方法来做数据标准化。</p>
 <pre class="r"><code># 数据的平方根
 normal_square &lt;- normal ^ 2
 
 # 现在的直方图
 hist(normal_square)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-2-1.png" width="80%" /></p>
 <p>对正态数据进行幂值运算后，数值也是一个左偏的分布，但与平方计算的结构有所不同。</p>
 <pre class="r"><code># 数据的幂值
 normal_exp &lt;- exp(normal)
 
 hist(normal_exp)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-3-1.png" width="80%" /></p>
 <p>对正态数据进行倒数运算后，数值是一个中间翘起来的分布。</p>
 <pre class="r"><code># 数据的幂值
 normal_reciprocal &lt;- 1/normal
 
 hist(normal_reciprocal)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-4-1.png" width="80%" /></p>
 <p>上述3种方法转换正态分布后，都是正偏态数据（偏度Skewness &gt; 0 ）。</p>
 <p><img src="https://vnote-1251564393.cos.ap-chengdu.myqcloud.com/1586666475_20200412124107047_26263.png" width="60%" /></p>
 <p>如果是负偏态数据，则需要将负偏态资料进行反转，转换为正偏态，然后再参考正偏态分布资料的转换方法进行转换。</p>
@@ -56,15 +56,15 @@ hist(normal_reciprocal)</code></pre>
 <pre class="r"><code># 轻度负偏态
 normal_square_rev &lt;- max(normal_square)+1-normal_square
 hist(normal_square_rev)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-6-1.png" width="80%" /></p>
 <pre class="r"><code># 中度负偏态
 normal_exp_rev &lt;- max(normal_exp)+1-normal_exp
 hist(normal_exp_rev)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-7-1.png" width="80%" /></p>
 <pre class="r"><code># 重度负偏态
 normal_reciprocal_rev &lt;- max(normal_reciprocal) + 1 - normal_reciprocal
 hist(normal_reciprocal_rev)</code></pre>
-<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/post/2020-04-12-normal-distribution-transformation_files/figure-html/unnamed-chunk-8-1.png" width="80%" /></p>
 <p><strong>注意事项</strong>：</p>
 <ul>
 <li>不是任何非正态数据都可以进行正态转换；</li>
