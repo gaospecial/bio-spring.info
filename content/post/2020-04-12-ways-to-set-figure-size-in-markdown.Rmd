@@ -40,7 +40,7 @@ plot(pressure)
 
 如果仅需要改变单一图片，则可以将chunk option 写到对应的 chunk 中。如`{r fig2, fig.height = 8, fig.width = 6, fig.align = "center"}`。
 
-```{r fig2, fig.height = 8, fig.width = 6, fig.align = "center"}
+```{r fig.height = 8, fig.width = 6, fig.align = "center"}
 plot(pressure)
 ```
 
@@ -50,7 +50,7 @@ plot(pressure)
 
 下面的例子与前面相比就是加入了`out.width="80%"`的设置，当用手机浏览时可以看到二者的差别。
 
-```{r fig2, fig.height = 8, fig.width = 6, fig.align="center", out.width="80%"}
+```{r fig.height = 8, fig.width = 6, fig.align="center", out.width="80%"}
 plot(pressure)
 ```
 
