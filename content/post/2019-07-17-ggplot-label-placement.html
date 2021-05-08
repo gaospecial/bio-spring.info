@@ -12,13 +12,14 @@ tags:
   - directlabel
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p><em>本文曾经发表在 biobabble 微信公众号 <a href="https://mp.weixin.qq.com/s/6MMVsO22n9oKZNC7qC7g5A">链接</a></em></p>
 <p>ggplot在绘制label的时候很容易出现字体溢出，位置难以调整的问题。Y叔曾经在公众号上吐槽过。</p>
 <p>实际上，标签如何在图片中展示，还真不是一个简单的问题。有一个领域“<a href="https://en.wikipedia.org/wiki/Automatic_label_placement">Automatic label placement</a>”就是研究该问题的。</p>
 <p>下面介绍一下如何处理这个标签定位的问题。</p>
-<div id="hjustvjustnudge_xnudge_y" class="section level2">
+<div id="方法一使用hjustvjustnudge_xnudge_y等参数调整" class="section level2">
 <h2>方法一：使用hjust，vjust，nudge_x，nudge_y等参数调整</h2>
 <p>我们从mpg数据集中提取10行数据画图，默认情况下是这样的情况。</p>
 <blockquote>
@@ -66,7 +67,7 @@ nudge_x, nudge_y = value.</p>
 <p>实际上，标签如何在图片中展示，还真不是一个简单的问题。有一个领域“<a href="https://en.wikipedia.org/wiki/Automatic_label_placement">Automatic label placement</a>”就是研究该问题的。</p>
 <p>不过，有一些R包可以帮助我们解决这一难题。</p>
 </div>
-<div id="ggrepel" class="section level2">
+<div id="方法二ggrepel" class="section level2">
 <h2>方法二：ggrepel</h2>
 <p>ggrepel包就是为了处理ggplot label而开发的。</p>
 <pre class="r"><code>library(ggrepel)
@@ -79,7 +80,7 @@ ggplot(df,aes(displ,hwy)) +
 <p>更多信息，请参考ggrepel文档中的ggrepel examples</p>
 </blockquote>
 </div>
-<div id="directlabels" class="section level2">
+<div id="方法三directlabels" class="section level2">
 <h2>方法三：directlabels</h2>
 <p>directlabels则是另外一个选择。这个包不仅能够用于ggplot图，还可以用于latitice基础绘图系统。</p>
 <pre class="r"><code>## 安装和载入
@@ -109,7 +110,7 @@ ggplot(mpg,aes(displ,hwy,color=class)) +
 <p>不同作图类型可用的方法可以参见：<a href="http://directlabels.r-forge.r-project.org/docs/index.html" class="uri">http://directlabels.r-forge.r-project.org/docs/index.html</a></p>
 </blockquote>
 </div>
-<div id="check_overlap" class="section level2">
+<div id="外check_overlap" class="section level2">
 <h2>外：check_overlap</h2>
 <p><code>check_overlap</code>也是<code>ggplot2</code>的<code>geom_text</code>自带的一个小参数，可以避免label重叠。应用时，会依次检查后面的label是否与前面的重叠，有重叠的话，就不显示。</p>
 <pre class="r"><code>## df数据集含有mpg中的十行数据

@@ -1,0 +1,56 @@
+---
+title: 常用假设检验方法的R语言实现
+author: gaoch
+date: '2019-09-23'
+slug: basic-stats-in-R
+categories:
+  - R
+tags:
+  - statistics
+  - ggplot2
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="r中的假设检验" class="section level1">
+<h1>R中的假设检验</h1>
+<p>常用的统计方法见下表所示。</p>
+<table>
+<thead>
+<tr class="header">
+<th>检验方法</th>
+<th>R函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T-test</td>
+<td>t.test()</td>
+<td>检验两组样品（参数）</td>
+</tr>
+<tr class="even">
+<td>Wilcoxon test</td>
+<td>wilcox.test()</td>
+<td>检验两组样品（非参）</td>
+</tr>
+<tr class="odd">
+<td>ANOVA</td>
+<td>aov()或者anova()</td>
+<td>检验多组样本（参数）</td>
+</tr>
+<tr class="even">
+<td>Kruskal-Wallis</td>
+<td>kruskal.test()</td>
+<td>检验多组样本（非参）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Mann-Whitney-Wilcoxon检验也被称为Wilcoxon检验。
+In statistics, the Mann–Whitney U test (also called the Mann–Whitney–Wilcoxon (MWW), Wilcoxon rank-sum test, or Wilcoxon–Mann–Whitney test)
+<a href="https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test" class="uri">https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test</a></p>
+</blockquote>
+<p>本文是阅读下列内容的读书笔记：<a href="http://www.sthda.com/english/wiki/comparing-means-in-r" class="uri">http://www.sthda.com/english/wiki/comparing-means-in-r</a></p>
+</div>

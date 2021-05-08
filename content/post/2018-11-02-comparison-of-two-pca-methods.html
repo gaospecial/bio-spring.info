@@ -10,11 +10,12 @@ tags:
   - statistics
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>上次提及 PCA 分析的方法有很多种。那不同方法之间的得到的结果会有差异吗？</p>
 <p>最近采用 PCA 分析 RNA-seq 样本之间的差异，得到了下面的结果。</p>
-<div class="section level1">
+<div id="生成示例数据" class="section level1">
 <h1>生成示例数据</h1>
 <p>生成一个含有 1000 个基因, 27 个样品的数据集.
 这 27 个样品来自于 3 个基因型(WT, Mutant1, Mutant2),
@@ -36,7 +37,7 @@ sample_table &lt;- colData(dds) %&gt;% as.data.frame() %&gt;%
 # 做 log2 变换
 rld &lt;- rlog(dds, blind = F)</code></pre>
 </div>
-<div id="-statsprcomp-" class="section level1">
+<div id="使用-statsprcomp-进行主成分分析" class="section level1">
 <h1>使用 <code>stats::prcomp()</code> 进行主成分分析</h1>
 <pre class="r"><code># 运行 PCA
 pca &lt;- stats::prcomp(t(assay(rld)))
@@ -61,7 +62,7 @@ p1 &lt;- ggplot(df,mapping) +
 p1</code></pre>
 <p><img src="/post/2018-11-02-comparison-of-two-pca-methods_files/figure-html/pca1-1.png" width="768" /></p>
 </div>
-<div id="-veganrda-" class="section level1">
+<div id="使用-veganrda-做主成分分析" class="section level1">
 <h1>使用 <code>vegan::rda()</code> 做主成分分析</h1>
 <pre class="r"><code># rda() 分析
 pca &lt;- vegan::rda(t(assay(rld))) 
@@ -83,7 +84,7 @@ p2 &lt;- ggplot(df,mapping) +
 p2</code></pre>
 <p><img src="/post/2018-11-02-comparison-of-two-pca-methods_files/figure-html/pca2-1.png" width="768" /></p>
 </div>
-<div class="section level1">
+<div id="放在一起比较一下" class="section level1">
 <h1>放在一起比较一下</h1>
 <p>可以看出，虽然两种方法计算的数值有差异，但是坐标位置是一致。</p>
 <pre class="r"><code>cowplot::plot_grid(p1,p2,labels = &quot;AUTO&quot;,ncol=1,align = &quot;hv&quot;)</code></pre>

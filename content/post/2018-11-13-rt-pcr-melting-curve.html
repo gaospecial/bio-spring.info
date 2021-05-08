@@ -11,11 +11,12 @@ tags:
   - RT-PCR
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>QuantStudio Real-Time PCR software 是我们经常使用的 RT-PCR 软件, 它上面的可视化只能简单看看, 不满足发论文的需求. 如果需要得到发表级的图片, 还是需要 用 ggplot 大法加持.</p>
 <p>为了能够使用这些数据, 首先需要导出文件. 为了方便操作, 文件导出时, 选择 <code>*.txt</code> 格式, 每个面板导出成一个单独文件. 将文件放在 <code>data</code> 文件夹中.</p>
-<div class="section level1">
+<div id="数据预处理" class="section level1">
 <h1>数据预处理</h1>
 <p>根据文件名后缀找到数据.</p>
 <pre class="r"><code># 数据文件目录
@@ -28,10 +29,11 @@ result_file &lt;- list.files(path=dir,full.names = T,pattern = &quot;Results_Vii
 meltcurve_file &lt;- list.files(path=dir,full.names = T,pattern = &quot;MeltCurve Data_ViiA7_export.txt&quot;)</code></pre>
 <p>我们使用 <code>readr</code> 来读取数据. 这个包避免了 R 语言对列名不合时宜的转换.</p>
 <p>每个文件的前面 43 列都是基本描述信息, 选择略过. 读取接下来的数据表格.</p>
-<p>在 <code>results</code> 文件中, CT 值的缺失值用 <code>&quot;Undermined&quot;</code> 表示. 另外, 该文件末尾的也需要检查一下, 如果有非数据信息要删掉. 否则读取文件会报错.</p>
+<p>在 <code>results</code> 文件中, CT 值的缺失值用 <code>"Undermined"</code> 表示. 另外, 该文件末尾的也需要检查一下, 如果有非数据信息要删掉. 否则读取文件会报错.</p>
 <pre class="r"><code># 读取文件
 library(tidyr)
 library(dplyr)</code></pre>
+<pre><code>## Warning: 程辑包&#39;dplyr&#39;是用R版本4.0.5 来建造的</code></pre>
 <pre><code>## 
 ## 载入程辑包：&#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -44,41 +46,55 @@ library(dplyr)</code></pre>
 
 # read
 amplification &lt;- read_delim(amplification_file,&quot;\t&quot;,skip = 43)</code></pre>
-<pre><code>## Parsed with column specification:
+<pre><code>## 
+## -- Column specification --------------------------------------------------------
 ## cols(
-##   Well = col_integer(),
-##   Cycle = col_integer(),
+##   Well = col_double(),
+##   Cycle = col_double(),
 ##   `Target Name` = col_character(),
 ##   Rn = col_double(),
 ##   `Delta Rn` = col_double()
 ## )</code></pre>
 <pre class="r"><code>raw_results &lt;-  read_delim(result_file,&quot;\t&quot;,skip = 43,na = &quot;Undetermined&quot;)</code></pre>
-<pre><code>## Parsed with column specification:
+<pre><code>## 
+## -- Column specification --------------------------------------------------------
 ## cols(
-##   .default = col_character(),
-##   Well = col_integer(),
+##   .default = col_logical(),
+##   Well = col_double(),
+##   `Well Position` = col_character(),
+##   `Sample Name` = col_character(),
+##   `Target Name` = col_character(),
+##   Task = col_character(),
+##   Reporter = col_character(),
+##   Quencher = col_character(),
 ##   CT = col_double(),
 ##   `Ct Mean` = col_double(),
 ##   `Ct SD` = col_double(),
 ##   `Ct Threshold` = col_double(),
-##   `Baseline Start` = col_integer(),
-##   `Baseline End` = col_integer(),
+##   `Baseline Start` = col_double(),
+##   `Baseline End` = col_double(),
 ##   Tm1 = col_double(),
 ##   Tm2 = col_double(),
-##   Tm3 = col_double()
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
+##   Tm3 = col_double(),
+##   MTP = col_character(),
+##   EXPFAIL = col_character(),
+##   HIGHSD = col_character(),
+##   NOAMP = col_character()
+##   # ... with 1 more columns
+## )
+## i&lt;U+00A0&gt;Use `spec()` for the full column specifications.</code></pre>
 <pre class="r"><code>meltcurve &lt;-  read_delim(meltcurve_file,&quot;\t&quot;,skip = 43)</code></pre>
-<pre><code>## Parsed with column specification:
+<pre><code>## 
+## -- Column specification --------------------------------------------------------
 ## cols(
-##   Well = col_integer(),
+##   Well = col_double(),
 ##   `Well Position` = col_character(),
-##   Reading = col_integer(),
+##   Reading = col_double(),
 ##   Temperature = col_double(),
 ##   Fluorescence = col_double(),
 ##   Derivative = col_double()
 ## )</code></pre>
-<p>在 <code>&quot;Results&quot;</code> 文件中, 含有我们定义的 <code>&quot;Sample Name&quot;</code> 和 <code>&quot;Target Name&quot;</code>, 而在另外两个文件中不存在. 为了能够在图中显示这些信息, 我们需要将这些信息提取出来, 并添加到另外两个文件数据中. 添加时, 按照 <code>&quot;Well&quot;</code> 合并即可.</p>
+<p>在 <code>"Results"</code> 文件中, 含有我们定义的 <code>"Sample Name"</code> 和 <code>"Target Name"</code>, 而在另外两个文件中不存在. 为了能够在图中显示这些信息, 我们需要将这些信息提取出来, 并添加到另外两个文件数据中. 添加时, 按照 <code>"Well"</code> 合并即可.</p>
 <pre class="r"><code># 修整数据
 meta &lt;- raw_results %&gt;% select(Well, `Sample Name`, `Target Name`)
 amplification &lt;- amplification %&gt;% select(Well,Cycle,Rn,`Delta Rn`) %&gt;%  
@@ -92,9 +108,9 @@ amplification &lt;- amplification %&gt;% select(Well,Cycle,Rn,`Delta Rn`) %&gt;%
   filter(Well&lt;=5)</code></pre>
 <pre><code>## Joining, by = &quot;Well&quot;</code></pre>
 </div>
-<div class="section level1">
+<div id="可视化" class="section level1">
 <h1>可视化</h1>
-<div class="section level2">
+<div id="扩增曲线" class="section level2">
 <h2>扩增曲线</h2>
 <p>首先绘制扩增曲线. 扩增曲线描述 RT-PCR 荧光信号随循环数的变化情况.</p>
 <pre class="r"><code>library(ggplot2)
@@ -118,7 +134,7 @@ ggplot(amplification,aes(Cycle,Rn,group=Well, color=`Target Name`,shape=`Sample 
   scale_y_continuous(labels=fancy_scientific)</code></pre>
 <p><img src="/post/2018-11-13-rt-pcr-melting-curve_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
-<div class="section level2">
+<div id="溶解曲线" class="section level2">
 <h2>溶解曲线</h2>
 <p>溶解曲线可以看出扩增产物的特异性.</p>
 <pre class="r"><code>ggplot(meltcurve,aes(Temperature,Derivative,group=Well,color=`Target Name`)) + 
