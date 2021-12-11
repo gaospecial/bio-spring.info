@@ -17,7 +17,7 @@ Label则一直不清楚如何设置。
 那么，如何在Tick
 Label中使用特殊格式的文本呢？答案在于Origin提供的一系列格式化函数中。
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/06/origin-text-formatting-commands-421x500.jpg" class="alignnone size-medium wp-image-871" sizes="(max-width: 421px) 100vw, 421px" srcset="http://bio-spring.top/wp-content/uploads/2017/06/origin-text-formatting-commands-421x500.jpg 421w, http://bio-spring.top/wp-content/uploads/2017/06/origin-text-formatting-commands-768x913.jpg 768w, http://bio-spring.top/wp-content/uploads/2017/06/origin-text-formatting-commands-862x1024.jpg 862w, http://bio-spring.top/wp-content/uploads/2017/06/origin-text-formatting-commands.jpg 1072w" width="421" height="500" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/06/origin-text-formatting-commands-421x500.jpg" class="alignnone size-medium wp-image-871" sizes="(max-width: 421px) 100vw, 421px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/06/origin-text-formatting-commands-421x500.jpg 421w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/06/origin-text-formatting-commands-768x913.jpg 768w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/06/origin-text-formatting-commands-862x1024.jpg 862w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/06/origin-text-formatting-commands.jpg 1072w" width="421" height="500" />
 
 如图所示，Origin提供了诸如上标、下标、上下标、斜体、粗体、希腊字母、指定字体、字号等各种各样的函数。
 

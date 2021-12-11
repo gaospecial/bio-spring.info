@@ -46,8 +46,8 @@ errorbar( x, y, L, U);
 \[/cc\]
 
 效果如下图所示：  
-![](http://bio-spring.top/wp-content/uploads/2011/02/errorbar.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/02/errorbar.png)
 
-![](http://bio-spring.top/wp-content/uploads/2011/02/errorbar2.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/02/errorbar2.png)
 
 refer：http://stackoverflow.com/questions/3748310/how-to-define-error-bar-in-matlab

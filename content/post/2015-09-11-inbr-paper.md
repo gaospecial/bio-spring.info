@@ -48,4 +48,4 @@ RpoB等酶突变可能会引起抗药性显著的、不可控的和不可逆转�
 
 转录因子与抗药性的关系，以及通过转录因子来设计新药治疗结核病，虽然尚在路上，但应当是一个很有意思的课题。
 
-全文下载点[这里](http://bio-spring.top/wp-content/uploads/2015/09/srep13969.pdf)。
+全文下载点[这里](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/09/srep13969.pdf)。

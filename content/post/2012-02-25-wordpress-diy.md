@@ -13,7 +13,7 @@ tags:
 
 WordPress主题的执行顺序，见：http://ihacklog.com/php/wordpress/dig-into-wordpress/the-wordpress-theme-files-execution-hierarchy.html
 
-<img src="http://bio-spring.top/wp-content/uploads/2012/02/WP_CheatSheet_TemplateMap.jpg" width="517" height="400" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/WP_CheatSheet_TemplateMap.jpg" width="517" height="400" />
 
 更改一个主题CSS文件时，新建一个CSS文档，然后import到主题默认CSS文档中。由于CSS定义中“后来居上”，所以应当插入在最后面，以免引起冲突。如果冲突，可以尝试加入“!important”来提升优先级。
 

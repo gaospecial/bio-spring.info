@@ -60,9 +60,9 @@ bash$ mysql -uuser -ppasswd -husername.mysql.rds.aliyuncs.com \#
 ### 绑定域名到阿里云解析
 
 进入域名注册上后台，修改NameServer为万网NS。  
-[<img src="http://bio-spring.top/wp-content/uploads/2015/08/clipboard.png" class="alignnone size-full wp-image-588" width="609" height="465" alt="godaddy_dns" />](http://bio-spring.top/wp-content/uploads/2015/08/clipboard.png)
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/clipboard.png" class="alignnone size-full wp-image-588" width="609" height="465" alt="godaddy_dns" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/clipboard.png)
 
 ### 在阿里云解析“添加解析”，等待生效即可。
 
-[<img src="http://bio-spring.top/wp-content/uploads/2015/08/aliyun_dns.png" class="alignnone size-full wp-image-587" width="1093" height="78" alt="aliyun_dns" />](http://bio-spring.top/wp-content/uploads/2015/08/aliyun_dns.png)  
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/aliyun_dns.png" class="alignnone size-full wp-image-587" width="1093" height="78" alt="aliyun_dns" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/aliyun_dns.png)  
 搞定了。

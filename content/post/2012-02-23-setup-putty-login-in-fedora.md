@@ -38,19 +38,19 @@ chmod go-w .ssh/authorized\_keys
 
 打开“PUTTYGEN.EXE”以便导入私钥。
 
-<img src="http://bio-spring.top/wp-content/uploads/2012/02/1.png" width="475" height="460" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/1.png" width="475" height="460" />
 
 将私钥导出为putty使用的“\*.ppk”格式文件
 
-<img src="http://bio-spring.top/wp-content/uploads/2012/02/2.png" width="477" height="460" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/2.png" width="477" height="460" />
 
 退出该软件，打开putty配置文件
 
-<img src="http://bio-spring.top/wp-content/uploads/2012/02/3.png" width="448" height="435" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/3.png" width="448" height="435" />
 
 在“Private key for authorization”项目下面选择刚才生成的ppk文档。
 
-![](http://bio-spring.top/wp-content/uploads/2012/02/4.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/4.png)
 
 保存配置文件。
 

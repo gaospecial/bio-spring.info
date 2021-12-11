@@ -53,7 +53,7 @@ database的格式存储数据。
 <div id="attachment_450" class="wp-caption alignnone"
 style="width: 310px">
 
-[<img src="http://bio-spring.top/wp-content/uploads/2012/08/fastq-300x81.png" title="fastq sample - text-based file" class="size-medium wp-image-450" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bio-spring.top/wp-content/uploads/2012/08/fastq-300x81.png 300w, http://bio-spring.top/wp-content/uploads/2012/08/fastq.png 731w" width="300" height="81" />](http://bio-spring.top/wp-content/uploads/2012/08/fastq.png)
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/fastq-300x81.png" title="fastq sample - text-based file" class="size-medium wp-image-450" sizes="(max-width: 300px) 100vw, 300px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/fastq-300x81.png 300w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/fastq.png 731w" width="300" height="81" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/fastq.png)
 
 fastq格式示例
 
@@ -64,7 +64,7 @@ fastq格式示例
 <div id="attachment_451" class="wp-caption alignnone"
 style="width: 310px">
 
-[<img src="http://bio-spring.top/wp-content/uploads/2012/08/sra-300x144.png" title="sra format - binary file" class="size-medium wp-image-451" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bio-spring.top/wp-content/uploads/2012/08/sra-300x144.png 300w, http://bio-spring.top/wp-content/uploads/2012/08/sra.png 749w" width="300" height="144" />](http://bio-spring.top/wp-content/uploads/2012/08/sra.png)
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/sra-300x144.png" title="sra format - binary file" class="size-medium wp-image-451" sizes="(max-width: 300px) 100vw, 300px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/sra-300x144.png 300w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/sra.png 749w" width="300" height="144" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/08/sra.png)
 
 sra格式的内容 - 二进制文件
 

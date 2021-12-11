@@ -13,7 +13,7 @@ tags:
 新建一个PowerPoint文档，选择插入 –》
 相册，指定目录，导入图片，点击“确定”就一气呵成了。使用图片工具将图片压缩之后，存放备查。十分方便。
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/插入相册-500x363.png" class="alignnone size-medium wp-image-901" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2017/11/插入相册-500x363.png 500w, http://bio-spring.top/wp-content/uploads/2017/11/插入相册.png 648w" width="500" height="363" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/插入相册-500x363.png" class="alignnone size-medium wp-image-901" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/插入相册-500x363.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/插入相册.png 648w" width="500" height="363" />
 
  
 

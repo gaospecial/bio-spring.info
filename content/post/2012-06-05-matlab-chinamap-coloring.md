@@ -17,7 +17,7 @@ tags:
 
 本文使用MatLab将各省人口数据展示出来，人口越多颜色越黄，人口越少颜色越绿。最终结果如下图所示（点击看大图）。
 
-[<img src="http://bio-spring.top/wp-content/uploads/2012/06/fig735025.6086-300x225.png" title="fig735025.6086" class="alignnone size-medium wp-image-356" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bio-spring.top/wp-content/uploads/2012/06/fig735025.6086-300x225.png 300w, http://bio-spring.top/wp-content/uploads/2012/06/fig735025.6086-1024x768.png 1024w, http://bio-spring.top/wp-content/uploads/2012/06/fig735025.6086.png 1201w" width="300" height="225" />](http://bio-spring.top/wp-content/uploads/2012/06/fig735025.6086.png)
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/fig735025.6086-300x225.png" title="fig735025.6086" class="alignnone size-medium wp-image-356" sizes="(max-width: 300px) 100vw, 300px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/fig735025.6086-300x225.png 300w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/fig735025.6086-1024x768.png 1024w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/fig735025.6086.png 1201w" width="300" height="225" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/fig735025.6086.png)
 
 绘制过程如下：
 
@@ -165,4 +165,4 @@ title('中国2011年各省人口数（万人）')
 </div>
 
 下载本文附件，包括M文件和输出结果（附件已更新2012-6-14）。  
-[china\_map](http://bio-spring.top/wp-content/uploads/2012/06/china_map1.zip)
+[china\_map](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/06/china_map1.zip)

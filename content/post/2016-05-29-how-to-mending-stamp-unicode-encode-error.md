@@ -38,4 +38,4 @@ profile文件可以由[biom](http://bio-spring.top/biom-format/)等文件格式�
 encode character in position 25-31: ordinal not in
 range(128)错误。经查是由于文件路径带非ascii字符（中文）造成的。将文件放在全英文的路径中就可以解决这一问题了。
 
-<img src="http://bio-spring.top/wp-content/uploads/2016/05/STAMP_unknown-error-500x197.png" class="alignnone size-medium wp-image-822" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2016/05/STAMP_unknown-error-500x197.png 500w, http://bio-spring.top/wp-content/uploads/2016/05/STAMP_unknown-error.png 506w" width="500" height="197" alt="STAMP_unknown error" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/05/STAMP_unknown-error-500x197.png" class="alignnone size-medium wp-image-822" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/05/STAMP_unknown-error-500x197.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/05/STAMP_unknown-error.png 506w" width="500" height="197" alt="STAMP_unknown error" />

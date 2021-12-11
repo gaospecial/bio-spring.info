@@ -17,14 +17,14 @@ PowerPoint
 
  
 
-<img src="http://bio-spring.top/wp-content/uploads/2016/03/2.png" class="size-full wp-image-801 aligncenter" width="212" height="71" alt="2" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/2.png" class="size-full wp-image-801 aligncenter" width="212" height="71" alt="2" />
 
  
 
 如下图所示，便是绘制一个三角瓶的主要步骤。
 
    
-<img src="http://bio-spring.top/wp-content/uploads/2016/03/flask-500x292.png" class="wp-image-805 size-medium aligncenter" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2016/03/flask-500x292.png 500w, http://bio-spring.top/wp-content/uploads/2016/03/flask-768x448.png 768w, http://bio-spring.top/wp-content/uploads/2016/03/flask-1024x597.png 1024w, http://bio-spring.top/wp-content/uploads/2016/03/flask.png 1360w" width="500" height="292" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/flask-500x292.png" class="wp-image-805 size-medium aligncenter" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/flask-500x292.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/flask-768x448.png 768w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/flask-1024x597.png 1024w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/03/flask.png 1360w" width="500" height="292" />
 
  
 

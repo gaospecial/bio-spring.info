@@ -19,7 +19,7 @@ tags:
 2.  Aspera命令行方式提交；
 3.  FTP方式提交。
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/preload1-500x287.png" class="alignnone size-medium wp-image-913" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2017/11/preload1-500x287.png 500w, http://bio-spring.top/wp-content/uploads/2017/11/preload1.png 501w" width="500" height="287" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload1-500x287.png" class="alignnone size-medium wp-image-913" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload1-500x287.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload1.png 501w" width="500" height="287" />
 
 ## 第一种方式
 
@@ -41,11 +41,11 @@ table中的文件列表一一对应起来的方法。
 下图即网页上面的提示。注意你需要下载一个key
 file在命令中使用。同时，还有把所有文件放在一个文件夹中。**相应文件夹中的所有文件都会被上传。**
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/preload5-500x152.png" class="alignnone size-medium wp-image-912" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2017/11/preload5-500x152.png 500w, http://bio-spring.top/wp-content/uploads/2017/11/preload5.png 716w" width="500" height="152" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload5-500x152.png" class="alignnone size-medium wp-image-912" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload5-500x152.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload5.png 716w" width="500" height="152" />
 
 命令运行时的界面如下：
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/preload4-500x69.png" class="alignnone size-medium wp-image-911" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2017/11/preload4-500x69.png 500w, http://bio-spring.top/wp-content/uploads/2017/11/preload4-768x106.png 768w, http://bio-spring.top/wp-content/uploads/2017/11/preload4.png 966w" width="500" height="69" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload4-500x69.png" class="alignnone size-medium wp-image-911" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload4-500x69.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload4-768x106.png 768w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload4.png 966w" width="500" height="69" />
 
 这种方式传输速度也很快。我用WIFI是的连接速度在30 Mbps左右。
 
@@ -55,11 +55,11 @@ file在命令中使用。同时，还有把所有文件放在一个文件夹中�
 
 首先，打开站点管理器，新建站点，填写主机、用户名、密码等信息。
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/preload2-500x424.png" class="alignnone size-medium wp-image-909" sizes="(max-width: 500px) 100vw, 500px" srcset="http://bio-spring.top/wp-content/uploads/2017/11/preload2-500x424.png 500w, http://bio-spring.top/wp-content/uploads/2017/11/preload2.png 529w" width="500" height="424" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload2-500x424.png" class="alignnone size-medium wp-image-909" sizes="(max-width: 500px) 100vw, 500px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload2-500x424.png 500w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload2.png 529w" width="500" height="424" />
 
 其次，进入“高级”标签页，在上面把用户目录填写上。
 
-<img src="http://bio-spring.top/wp-content/uploads/2017/11/preload3.png" class="alignnone size-full wp-image-910" width="320" height="295" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2017/11/preload3.png" class="alignnone size-full wp-image-910" width="320" height="295" />
 
 这时候就可以连接了。需要注意的是，连接之后，需要在用户目录中新建一个子文件夹（必选操作）。然后才能将文件通过FTP传输到用户目录的新建子文件夹内。
 

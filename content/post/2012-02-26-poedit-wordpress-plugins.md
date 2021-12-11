@@ -15,7 +15,7 @@ tags:
 ---
 
 
-<img src="http://bio-spring.top/wp-content/uploads/2012/02/565px-Pic1.jpg" width="565" height="600" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2012/02/565px-Pic1.jpg" width="565" height="600" />
 
 关于“*.pot”文档、“*.po”文档和“\*.mo”文档的来历见上面图片。
 

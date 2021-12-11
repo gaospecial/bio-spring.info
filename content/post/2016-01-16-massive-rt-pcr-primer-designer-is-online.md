@@ -20,7 +20,7 @@ discussed by two previous blog posts ([Post
 1](http://bio-spring.top/rt-primer-bioperl/) and [Post
 2](http://bio-spring.top/primer_error-missing-sequence-tag/)).
 
-<img src="http://bio-spring.top/wp-content/uploads/2016/01/rt-primer-designer-1.png" class="alignnone size-full wp-image-776" width="493" height="183" alt="rt-primer-designer" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2016/01/rt-primer-designer-1.png" class="alignnone size-full wp-image-776" width="493" height="183" alt="rt-primer-designer" />
 
 You may access the service at [The Massive RT-PCR Primer
 Designer](http://tools.bio-spring.top/rtprimers.cgi).

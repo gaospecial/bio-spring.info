@@ -49,10 +49,10 @@ mapshow(file) % 可以直接读取文件中数据作图
 **图片如下：**  
 **国家基础地理信息系统<img src="https://s.w.org/images/core/emoji/13.0.1/72x72/2122.png" class="wp-smiley" alt="™" />版权所有**  
 这是一个以bou1\_4l为基础的作图，可以看到南海的断续线。图内没有填充。  
-<img src="http://bio-spring.top/wp-content/uploads/2011/06/fig11.png" width="400" />  
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/06/fig11.png" width="400" />  
 这是一个以bou1\_4p为基础的作图，不可以看到南海的断续线。图内有填充。  
 这显然是由于曲线没有面积造成的。  
-<img src="http://bio-spring.top/wp-content/uploads/2011/06/fig21.png" width="400" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/06/fig21.png" width="400" />
 
 **参考资料：**  
 MATLAB绘制中国地图

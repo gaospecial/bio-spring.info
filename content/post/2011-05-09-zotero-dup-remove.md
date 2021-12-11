@@ -47,7 +47,7 @@ hidden=”false”/&gt;</span>
 
 现在重新打开firefox试一试。你会发现在zotero的齿轮图标下面，多了一个”Show
 duplicates“的项目，点点，看是不是你想要的。  
-![](http://bio-spring.top/wp-content/uploads/2011/05/1.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/05/1.png)
 
 备注：  
 本操作在zotero 2.1.6版本上实验成功，与2.1以下版本可能并不兼容。  

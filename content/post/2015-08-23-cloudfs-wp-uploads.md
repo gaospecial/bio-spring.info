@@ -62,7 +62,7 @@ mv /var/www/html/wp-content/uploads/
 ln -s /mnt/oss/wp\_uploads/ /var/www/html/wp-content/uploads  
 \[/cc\]
 
-[<img src="http://bio-spring.top/wp-content/uploads/2015/08/wp-cloudfs-300x103.png" class="alignnone size-medium wp-image-600" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bio-spring.top/wp-content/uploads/2015/08/wp-cloudfs-300x103.png 300w, http://bio-spring.top/wp-content/uploads/2015/08/wp-cloudfs.png 867w" width="300" height="103" alt="wp-cloudfs" />](http://bio-spring.top/wp-content/uploads/2015/08/wp-cloudfs.png)
+[<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/wp-cloudfs-300x103.png" class="alignnone size-medium wp-image-600" sizes="(max-width: 300px) 100vw, 300px" srcset="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/wp-cloudfs-300x103.png 300w, https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/wp-cloudfs.png 867w" width="300" height="103" alt="wp-cloudfs" />](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2015/08/wp-cloudfs.png)
 
 在 WordPress 媒体库上传一个新内容，检查是否可用。
 

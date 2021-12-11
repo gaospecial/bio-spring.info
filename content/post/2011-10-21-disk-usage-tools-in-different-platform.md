@@ -21,16 +21,16 @@ tags:
 > Android：磁盘详情 DiskUsage
 
 **Ubuntu系统自带“磁盘使用分析程序“，图示清晰明了。**  
-![](http://bio-spring.top/wp-content/uploads/2011/10/Screenshot-%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90%E5%99%A8.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/10/Screenshot-%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90%E5%99%A8.png)
 
 **Windows 推荐 RidNacs**  
 挺好用的一个小软件，就是图表有些看不懂。  
-![](http://bio-spring.top/wp-content/uploads/2011/10/RidNacs-C.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/10/RidNacs-C.png)
 
 **Android：磁盘详情 DiskUsage**  
 选择想查看的分区。  
-![](http://bio-spring.top/wp-content/uploads/2011/10/146144_ldpi_screenshot_1.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/10/146144_ldpi_screenshot_1.png)
 
 速度很快，马上出来相应的图表。
 
-![](http://bio-spring.top/wp-content/uploads/2011/10/1.png)
+![](https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/10/1.png)

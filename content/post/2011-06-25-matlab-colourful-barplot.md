@@ -13,11 +13,11 @@ tags:
 首先，看一下效果图。
 
 默认条件下的柱状图  
-<img src="http://bio-spring.top/wp-content/uploads/2011/06/fig1.png" width="400" />  
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/06/fig1.png" width="400" />  
 漂亮的柱状图  
-<img src="http://bio-spring.top/wp-content/uploads/2011/06/fig2.png" width="400" />  
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/06/fig2.png" width="400" />  
 渐变着色的柱状图  
-<img src="http://bio-spring.top/wp-content/uploads/2011/06/fig3.png" width="400" />  
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/06/fig3.png" width="400" />  
 代码如下：
 
 \[cc lang=”matlab”\]  

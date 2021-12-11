@@ -10,7 +10,7 @@ tags:
 
 
 **试验原理**  
-<img src="http://bio-spring.top/wp-content/uploads/2011/02/2011-02-16-203356_783x302_scrot.png" width="584" height="225" />  
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/02/2011-02-16-203356_783x302_scrot.png" width="584" height="225" />  
 如图所示，糖苷酶水解底物无色ONPG，生成黄色产物，通过测量吸光值，可以得出糖苷酶的活性。
 
 **所用试剂**
@@ -71,7 +71,7 @@ OD<sub>600</sub>)
 The units give the change in A<sub>420</sub>/min/mL of  
 cells/OD<sub>600</sub>
 
-<img src="http://bio-spring.top/wp-content/uploads/2011/02/2011-02-16-203553_648x613_scrot.png" width="562" height="531" />
+<img src="https://cloudfs-spring.oss-cn-qingdao.aliyuncs.com/bio_spring_uploads/2011/02/2011-02-16-203553_648x613_scrot.png" width="562" height="531" />
 
 Beta-Galactosidase Activity Assay. at
 &lt;http://rothlab.ucdavis.edu/protocols/beta-galactosidase-3.html  
