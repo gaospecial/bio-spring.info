@@ -4,7 +4,7 @@ title = "R.bio-spring.info"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = "bio-spring-netlify-com"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$", "_cache$"]
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "https://github.com/gaospecial/bio-spring.info/"
 [[menu.main]]
     name = "Wordpress blog"
-    url = "http://bio-spring.info"
+    url = "http://bio-spring.top"
 
 [params]
     description = "A website built through Hugo and blogdown."

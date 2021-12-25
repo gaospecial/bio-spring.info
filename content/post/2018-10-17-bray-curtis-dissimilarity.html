@@ -9,6 +9,7 @@ tags:
   - statistics
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>本文介绍 Bray Curtis Dissimilarity 的概念和计算方法。</p>
@@ -22,7 +23,7 @@ tags:
 <li><span class="math inline">\(S_j\)</span> 是样地 <span class="math inline">\(j\)</span> 中物种的总数；</li>
 <li><span class="math inline">\(C_{ij}\)</span> 在两块样地中每个物种的较少计数的总和。</li>
 </ul>
-<div class="section level2">
+<div id="简单的例子" class="section level2">
 <h2>简单的例子</h2>
 <p>有两个水族箱：</p>
 <ul>
@@ -34,16 +35,16 @@ tags:
 <p>因此,</p>
 <p><span class="math display">\[BC_{ij}=1-(2*10)/(17+16)=0.39\]</span></p>
 </div>
-<div id="bray-curtis-dissimilarity-" class="section level2">
+<div id="bray-curtis-dissimilarity-的性质" class="section level2">
 <h2>Bray-Curtis Dissimilarity 的性质</h2>
 <p>其取值介于0-1之间。如果是0，则两个样地共享所有相同的物种；如果是1，则它们不共享任何物种。</p>
 <p>还有另外一个 Bray-Curtis index，其取值是 1 - Bray-Curtis dissimilarity。表示两个样地之间的相似程度。</p>
 </div>
-<div class="section level2">
+<div id="适用情况" class="section level2">
 <h2>适用情况</h2>
 <p>要计算 Bray-Curtis Dissimilarity，必须假设两个样地的面积或体积大小相同（与物种计数相关），否则需要在计算前调整计数。</p>
 </div>
-<div id="r" class="section level2">
+<div id="r语言实现" class="section level2">
 <h2>R语言实现</h2>
 <p><code>vegan</code>提供了<code>vegdist</code>来计算这个数值。</p>
 <pre class="r"><code>## 用 vegdist 重复上面的例子
@@ -52,7 +53,7 @@ require(&quot;vegan&quot;)</code></pre>
 <pre><code>## 载入需要的程辑包：vegan</code></pre>
 <pre><code>## 载入需要的程辑包：permute</code></pre>
 <pre><code>## 载入需要的程辑包：lattice</code></pre>
-<pre><code>## This is vegan 2.5-2</code></pre>
+<pre><code>## This is vegan 2.5-6</code></pre>
 <pre class="r"><code>vegdist(df,method = &quot;bray&quot;) # 这个值跟前面人脑计算的一致</code></pre>
 <pre><code>##           1
 ## 2 0.3939394</code></pre>
@@ -65,12 +66,12 @@ bc &lt;- vegdist(varespec)
 pheatmap::pheatmap(bc,breaks = seq(0,1,0.01))</code></pre>
 <p><img src="/post/2018-10-17-bray-curtis-dissimilarity_files/figure-html/vegdist-1.png" width="576" /></p>
 </div>
-<div class="section level2">
+<div id="延伸阅读" class="section level2">
 <h2>延伸阅读</h2>
-<p><code>vegdist</code>的可用的方法（<code>method = &quot;bray&quot;</code>）还包括 “manhattan”, “euclidean”, “canberra”, “clark”, “bray”, “kulczynski”, “jaccard”, “gower”, “altGower”, “morisita”, “horn”, “mountford”, “raup”, “binomial”, “chao”, “cao” or “mahalanobis”。</p>
+<p><code>vegdist</code>的可用的方法（<code>method = "bray"</code>）还包括 “manhattan”, “euclidean”, “canberra”, “clark”, “bray”, “kulczynski”, “jaccard”, “gower”, “altGower”, “morisita”, “horn”, “mountford”, “raup”, “binomial”, “chao”, “cao” or “mahalanobis”。</p>
 <p><code>designdist</code>可用来设计自己的差异度算法。</p>
 </div>
-<div class="section level2">
+<div id="参考资料" class="section level2">
 <h2>参考资料</h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://www.statisticshowto.datasciencecentral.com/bray-curtis-dissimilarity/" class="uri">https://www.statisticshowto.datasciencecentral.com/bray-curtis-dissimilarity/</a></li>

@@ -129,8 +129,9 @@ plot(g3)</code></pre>
 <pre class="r"><code>method &lt;- c(&quot;association&quot;, &quot;jaccard&quot;, &quot;inclusion&quot;,&quot;salton&quot;, &quot;equivalence&quot;)
 m3_list &lt;- lapply(method, function(x){
   bibliometrix::normalizeSimilarity(m3,type = x)
-})
-names(m3_list) &lt;- method
+})</code></pre>
+<pre><code>## This version of bslib is designed to work with shiny version 1.5.0.9007 or higher.</code></pre>
+<pre class="r"><code>names(m3_list) &lt;- method
 m3_list</code></pre>
 <pre><code>## $association
 ## 3 x 3 sparse Matrix of class &quot;dsCMatrix&quot;

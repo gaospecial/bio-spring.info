@@ -9,9 +9,10 @@ tags:
   - enrichplot
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<div id="go-term--enrichplot-" class="section level1">
+<div id="go-term-太长-enrichplot-好局促怎么办" class="section level1">
 <h1>GO term 太长, enrichplot 好局促怎么办?</h1>
 <p>例如下面这个样子:</p>
 <pre class="r"><code># 可重复运行的代码拿去
@@ -87,7 +88,7 @@ short_label &lt;- function(label, maxLen = 50, maxWord = 5, pattern = &quot; &qu
 <p><img src="/post/2018-11-26-enrichplot-fancy-label_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><strong>注意</strong>: <code>short_label()</code> 带参数和不带参数时具有不同的调用方法.</p>
 </div>
-<div id="-enrichplot-x" class="section level1">
+<div id="不满意-enrichplot-x轴排序怎么破" class="section level1">
 <h1>不满意 enrichplot x轴排序怎么破?</h1>
 <p>我觉得 compareCluster 的输出可能会更加有比较价值. 但是发现 x 轴的排序有时候会有一些问题.</p>
 <p><code>compareCluster</code> 只能根据其本来固有的顺序排序, 这在程序上没有问题. 但用起来可能情况比较复杂.</p>
@@ -98,7 +99,7 @@ names(gcSample)</code></pre>
 <pre class="r"><code>set.seed(0)
 names(gcSample) &lt;- sample(seq(0,28,by=4),8)
 names(gcSample)</code></pre>
-<pre><code>## [1] &quot;28&quot; &quot;4&quot;  &quot;8&quot;  &quot;20&quot; &quot;12&quot; &quot;0&quot;  &quot;24&quot; &quot;16&quot;</code></pre>
+<pre><code>## [1] &quot;20&quot; &quot;0&quot;  &quot;12&quot; &quot;24&quot; &quot;4&quot;  &quot;16&quot; &quot;8&quot;  &quot;28&quot;</code></pre>
 <pre class="r"><code>ck &lt;- compareCluster(geneClusters = gcSample, fun = &quot;enrichKEGG&quot;)</code></pre>
 <p>比如下面的例子中, 我们是想让 x 轴依数字大小(Time)排序的. 但是由于这个顺序与 <code>list</code> 顺序不同, 导致结果差强人意.</p>
 <pre class="r"><code>dotplot(ck)</code></pre>
@@ -111,8 +112,8 @@ names(gcSample)</code></pre>
 <pre class="r"><code>p &lt;- dotplot(ck)
 
 levels(p$data$Cluster)</code></pre>
-<pre><code>## [1] &quot;4\n(359)&quot;  &quot;8\n(172)&quot;  &quot;20\n(388)&quot; &quot;12\n(412)&quot; &quot;0\n(245)&quot;  &quot;24\n(301)&quot;
-## [7] &quot;16\n(157)&quot;</code></pre>
+<pre><code>## [1] &quot;0\n(383)&quot;  &quot;12\n(187)&quot; &quot;24\n(405)&quot; &quot;4\n(445)&quot;  &quot;16\n(264)&quot; &quot;8\n(317)&quot; 
+## [7] &quot;28\n(160)&quot;</code></pre>
 <pre class="r"><code>p$data$Cluster &lt;- factor(p$data$Cluster, 
                          levels = c(&quot;0\n(245)&quot;, &quot;4\n(359)&quot;,  &quot;8\n(172)&quot;, &quot;12\n(412)&quot;, &quot;16\n(157)&quot;, &quot;20\n(388)&quot;,    &quot;24\n(301)&quot;),
                          labels = c(0,4,8,12,16,20,24))

@@ -9,6 +9,7 @@ tags:
   - ggraph
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>ggraph 可用于 <strong>网络、图和树状</strong> 数据结构的可视化。它扩展了 <code>ggplot2</code> 的 geoms，facets 等功能，并且添加了对 <em>layouts</em> 语法的支持。</p>
@@ -93,6 +94,22 @@ ggraph(graph, layout = &#39;kk&#39;) +
     geom_node_point(aes(size = Popularity)) + 
     facet_edges(~year) + 
     theme_graph(foreground = &#39;steelblue&#39;, fg_text_colour = &#39;white&#39;)</code></pre>
+<pre><code>## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): Windows字体数据
+## 库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): Windows字体数据
+## 库里没有这样的字体系列
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): Windows字体数据
+## 库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>在这里，分两年显示了学生间的亲密关系，与更多人有联系的同学受欢迎程度更大（Popularity），其节点的大小越大。</p>
 <div id="核心概念" class="section level2">
@@ -115,11 +132,33 @@ ggraph(graph) +
   geom_edge_link(aes(colour = factor(year))) + 
   geom_node_point()</code></pre>
 <pre><code>## Using `stress` as default layout</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>在 <code>ggraph()</code> 指定布局的同时还可以添加参数。</p>
 <pre class="r"><code>ggraph(graph, layout = &#39;kk&#39;, maxiter = 100) + 
   geom_edge_link(aes(colour = factor(year))) + 
   geom_node_point()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><code>ggraph()</code> 也可以使用预先计算好的布局。这在自定义布局的时候很有用。</p>
 <pre class="r"><code>layout &lt;- create_layout(graph, layout = &#39;eigen&#39;)</code></pre>
@@ -128,6 +167,16 @@ ggraph(graph) +
 <pre class="r"><code>ggraph(layout) + 
   geom_edge_link(aes(colour = factor(year))) + 
   geom_node_point()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p><code>creat_layout()</code> 的结果是一个数据框，包括 node 的位置和属性。当然，图的其它信息也包含在其中。</p>
 <pre class="r"><code>head(layout)</code></pre>
@@ -188,6 +237,18 @@ ggraph(graph) +
 ggraph(graph, &#39;partition&#39;) + 
   geom_node_tile(aes(fill = depth), size = 0.25) +
   geom_node_text(aes(label=shortName))</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 <div id="sunburst-plot" class="section level5">
@@ -196,6 +257,14 @@ ggraph(graph, &#39;partition&#39;) +
 ggraph(graph, &#39;partition&#39;, circular = TRUE) + 
   geom_node_arc_bar(aes(fill = depth), size = 0.25) + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="hive-plot" class="section level5">
@@ -212,6 +281,29 @@ ggraph(graph, &#39;hive&#39;, axis = friends, sort.by = degree) +
   geom_edge_hive(aes(colour = factor(year))) + 
   geom_axis_hive(aes(colour = friends), size = 2, label = FALSE) + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 <div id="hierarchical-layouts-分层布局" class="section level5">
@@ -225,12 +317,28 @@ set.seed(1)
 ggraph(graph, &#39;circlepack&#39;, weight = size) + 
   geom_node_circle(aes(fill = depth), size = 0.25, n = 50) + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <pre class="r"><code>set.seed(1)
 ggraph(graph, &#39;circlepack&#39;, weight = size) + 
   geom_edge_link() + 
   geom_node_point(aes(colour = depth)) +
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <pre class="r"><code>ggraph(graph, &#39;tree&#39;) + 
   geom_edge_diagonal()</code></pre>
@@ -243,9 +351,6 @@ ggraph(graph, &#39;circlepack&#39;, weight = size) +
 ggraph(graph, &#39;matrix&#39;, sort.by = node_rank_leafsort()) + 
   geom_edge_point(mirror = TRUE) + 
   coord_fixed()</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;seriation&#39;:
-##   method         from 
-##   reorder.hclust gclus</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 </div>
@@ -258,6 +363,14 @@ ggraph(graph, &#39;matrix&#39;, sort.by = node_rank_leafsort()) +
 
 ggraph(gr, layout = &#39;partition&#39;) + 
   geom_node_tile(aes(y = -y, fill = depth))</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>通过对数据进行变换，可以控制上面的图 <strong>Y 数值取负数</strong>，以及下面的图 <strong>只显示叶片</strong>。</p>
 <pre class="r"><code>ggraph(gr, layout = &#39;dendrogram&#39;, circular = TRUE) + 
@@ -276,6 +389,17 @@ ggraph(graph, &#39;stress&#39;) +
   geom_node_point() + 
   geom_edge_link() + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>还有一些其它的酷图。</p>
 <pre class="r"><code>l &lt;- ggraph(gr, layout = &#39;partition&#39;, circular = TRUE)
@@ -283,11 +407,24 @@ ggraph(graph, &#39;stress&#39;) +
 ## 分区表图
 l + geom_node_arc_bar(aes(fill = depth)) + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <pre class="r"><code>## 
 l + geom_edge_diagonal() + 
   geom_node_point(aes(colour = depth)) + 
   coord_fixed()</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-20-2.png" width="672" /></p>
 </div>
 <div id="edges" class="section level3">
@@ -340,6 +477,17 @@ hairball &lt;- as_tbl_graph(highschool) %&gt;%
 <pre class="r"><code>## 纺锤体
 ggraph(hairball, layout = &#39;stress&#39;) + 
   geom_edge_fan(aes(colour = year))</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <pre class="r"><code>## 平行宇宙
 # let&#39;s make some of the student love themselves
@@ -348,11 +496,33 @@ loopy_hairball &lt;- hairball %&gt;%
 ggraph(loopy_hairball, layout = &#39;stress&#39;) + 
   geom_edge_link(aes(colour = year), alpha = 0.25) + 
   geom_edge_loop(aes(colour = year))</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
 <pre class="r"><code>## 密度图
 ggraph(hairball, layout = &#39;stress&#39;) + 
   geom_edge_density(aes(fill = year)) + 
   geom_edge_link(alpha = 0.25)</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## Windows字体数据库里没有这样的字体系列</code></pre>
 <p><img src="/post/2019-12-04-ggraph-manual_files/figure-html/unnamed-chunk-22-3.png" width="672" /></p>
 <p>关于上面的密度图，可以显示边类型的密度。在上面的图中，如果 1957 年的居多，则显示为偏红色；如果 1958 年的居多，则显示为偏蓝色。</p>
 </div>
