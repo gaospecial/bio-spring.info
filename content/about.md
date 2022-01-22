@@ -1,6 +1,12 @@
 ---
 title: "About"
-date: "2016-05-05T21:48:51-07:00"
+date: "2022-1-22 09:29:01"
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+**CHUN-HUI GAO (高春辉)**
+
+Ph. D, Microbiology, bioinformatician, data scientist and useR.
+
+I am broadly interested in the data mining, particularly integration and visualization, of biological, industrial and social data sets, which comes from high-throughput screening, Next-Generation Sequencing (NGS), public databases and so on.
+
+[Read more](/cv/)
